@@ -1,4 +1,5 @@
 import Spinner from "./components/Spinner";
+import Table from "./components/Table";
 import useFetch from "./hooks/useFetch";
 
 export type MarketStatus = {
@@ -27,7 +28,7 @@ function App() {
           <h2 className="text-center text-2xl mb-4">
             {globalMarkets.endpoint}
           </h2>
-          {/* <Table markets={globalMarkets.markets} /> */}
+          <Table markets={globalMarkets.markets} />
         </>
       )}
       {loading && <Spinner />}
